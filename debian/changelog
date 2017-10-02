@@ -1,0 +1,52 @@
+prometheus-mysqld-exporter (0.9.0+ds-4) UNRELEASED; urgency=medium
+
+  [ Filippo Giunchedi ]
+  * Suggest default-mysql-server | virtual-mysql-server (Closes: #848481)
+
+  [ Martín Ferrari ]
+  * debian/control: Update package name for client-golang.
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Fix Vcs-* fields.
+  * debian/control: Replace golang-go with golang-any in Build-Depends.
+  * debian/control: Mark package as autopkgtest-able.
+  * debian/rules: Replace DH_GOPKG with XS-Go-Import-Path.
+  * debian/rules: Replace dpkg-parsechangelog with /usr/share/dpkg/pkg-info.mk
+    and simplify.
+
+ -- Filippo Giunchedi <filippo@debian.org>  Fri, 23 Dec 2016 22:56:47 +0000
+
+prometheus-mysqld-exporter (0.9.0+ds-3) unstable; urgency=medium
+
+  * debian/patches/fix_test_int_overflow.patch: Fix tests for 32bit archs
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon, 21 Nov 2016 00:48:31 +0000
+
+prometheus-mysqld-exporter (0.9.0+ds-2) unstable; urgency=medium
+
+  * Set BUILDFLAGS to report branch/version/revision in
+  mysqld_exporter_build_info metric
+
+ -- Filippo Giunchedi <filippo@debian.org>  Mon, 10 Oct 2016 12:42:38 +0100
+
+prometheus-mysqld-exporter (0.9.0+ds-1) unstable; urgency=medium
+
+  * New upstream release
+    + BREAKING CHANGES: InnoDB buffer pool page stats have been renamed/fixed
+      to better support aggregations
+      https://github.com/prometheus/mysqld_exporter/pull/130
+
+ -- Filippo Giunchedi <filippo@debian.org>  Wed, 05 Oct 2016 17:04:04 +0100
+
+prometheus-mysqld-exporter (0.8.1+ds-2) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+ -- Paul Tagliamonte <paultag@debian.org>  Wed, 29 Jun 2016 20:55:56 -0400
+
+prometheus-mysqld-exporter (0.8.1+ds-1) unstable; urgency=medium
+
+  * Initial release (Closes: #815560)
+  * Unvendorize all dependencies
+
+ -- Filippo Giunchedi <filippo@debian.org>  Tue, 10 May 2016 16:37:31 +0100
