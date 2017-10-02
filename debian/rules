@@ -25,7 +25,7 @@ override_dh_auto_build:
 	dh_auto_build -O--buildsystem=golang -- $(BUILDFLAGS)
 
 override_dh_auto_install:
-	dh_auto_install --no-source
+	dh_auto_install -- --no-source
 	# Rename the binary to match the debian package.
 	mv -v debian/$(DEB_SOURCE)/usr/bin/mysqld_exporter \
             debian/$(DEB_SOURCE)/usr/bin/$(DEB_SOURCE)
